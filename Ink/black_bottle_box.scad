@@ -1,5 +1,5 @@
-width = 95;
-length = 75;
+width = 75;
+length = 60;
 
 cube([width+6, length+6, 3]);
 cube([width+6, 3, 18]);
