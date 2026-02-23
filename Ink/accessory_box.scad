@@ -2,7 +2,7 @@ hinge_radius = 4;
 hinge_diameter = 2 * hinge_radius;
 wall_thickness = 3;
 full_width = 26+52+(2*wall_thickness) + hinge_diameter;
-full_length = 26+26+26+55+(4*wall_thickness);
+full_length = 26+26+26+55+(5*wall_thickness);
 interior_height = 35;
 full_height = interior_height + wall_thickness + hinge_diameter;
 
@@ -22,8 +22,8 @@ difference() {
     translate([hinge_radius, 0, wall_thickness + interior_height + hinge_radius]) rotate([0, 0, 90]) rotate([0, 90, 0]) cylinder(h=3, r=1.5);
 }
 difference() {
-    translate([0, full_length, 0]) cube([full_width, 3, full_height]);
-    translate([hinge_radius, full_length, wall_thickness + interior_height + hinge_radius]) rotate([0, 0, 90]) rotate([0, 90, 0]) cylinder(h=3, r=1.5);
+    translate([0, full_length - wall_thickness, 0]) cube([full_width, 3, full_height]);
+    translate([hinge_radius, full_length - wall_thickness, wall_thickness + interior_height + hinge_radius]) rotate([0, 0, 90]) rotate([0, 90, 0]) cylinder(h=3, r=1.5);
 }
 cube([hinge_diameter, full_length, full_height - hinge_diameter]);
 translate([full_width - wall_thickness, 0, 0]) cube([3, full_length, full_height - wall_thickness]);

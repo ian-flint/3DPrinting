@@ -2,12 +2,12 @@ hinge_radius = 4;
 hinge_diameter = 2 * hinge_radius;
 wall_thickness = 3;
 full_width = 26+52+(2*wall_thickness) + hinge_diameter;
-full_length = 26+26+26+55+(4*wall_thickness);
+full_length = 26+26+26+55+(5*wall_thickness);
 interior_height = 35;
 full_height = interior_height + wall_thickness + hinge_diameter;
 
 width = full_length - (2 * wall_thickness);
-length = full_width - 2;
+length = full_width - 5;
 
 difference() {
 union(){
